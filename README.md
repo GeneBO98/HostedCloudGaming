@@ -1,6 +1,9 @@
 # HostedCloudGaming
 Some ideas and automation tips for running your own PC as a cloud gaming server
 
+## DEMO
+https://github.com/GeneBO98/HostedCloudGaming/assets/60564320/32a0da4d-4ef7-4e54-832b-a6f49a5224bf
+
 ## Advisory
 This guide is designed to work on Windows for the gaming host. Additionally, two of the resolution configurations in Sunshine are for iPad and iPhone but can be removed or tweaked for different devices. It is also recommended that you use a Dummy DP or HDMI adapter as the remote connection monitor. The reason is that you can cheaply get a 4K equivalent virtual monitor that will adapt to many display resolutions and prevent the need for your primary monitor to change resolutions. I found this to be the cleanest approach. The adapter I used is here: https://www.amazon.com/dp/B0C2CGHRG4?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
@@ -33,6 +36,7 @@ However, if you want to play games from your favorite emulators easily from your
 
 #### Configure Playnite
 In Playnite, open the menu > Library > Configure Emulators. Select Add at the bottom left then give it a name that makes sense. I usually do the name of the console that is being emulated. Now for Installation Folder you will want to choose the folder that actually contains the .exe of your emulator. Under the Emulator specification dropdown, choose the emulator from the list. Add the default profile for the Emulator and then Save. Playnite even has an option to Download Emulators from this same window. Save and close the window.
+You can do even more to make Playnite look and feel much better. I used this guide for the add-ons and theme: https://www.youtube.com/watch?v=Xurs63Ccnlo&t=139s
 
 #### Add Emulated Games
 Open the menu for Playnite again and choose Add Game > Emulated Game. Now choose Add scanner and under the drop down for Scan with emulator you should see the emulator you have set up. The profile is going to be Default unless you created your own. The scan folder is going to be the ROMs folder for that emulator. Now just choose Start scan. It will find the ROMs you have in that folder and then you can rename them to what you wish and uncheck anything that you don't want. 
