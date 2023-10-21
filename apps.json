@@ -1,0 +1,90 @@
+{
+    "env": {
+        "PATH": "$(PATH);$(ProgramFiles(x86))\\Steam"
+    },
+    "apps": [
+        {
+            "name": "Desktop",
+            "image-path": "desktop.png",
+            "exclude-global-prep-cmd": "true",
+            "elevated": "false"
+        },
+        {
+            "name": "Playnite 1080P",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite 1080p.bat\""
+            ],
+            "image-path": ""
+        },
+        {
+            "name": "Playnite 1440p",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite 1440p.bat\""
+            ],
+            "image-path": "C:\\Users\\boverton\\AppData\\Local\\Playnite\\Themes\\Fullscreen\\Default\\Images\\applogo_full.png"
+        },
+        {
+            "name": "Playnite 720p",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite 720p.bat\""
+            ],
+            "image-path": ""
+        },
+        {
+            "name": "Playnite 4k",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite 4k.bat\""
+            ],
+            "image-path": ""
+        },
+        {
+            "name": "Playnite 1600p",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite 1600p.bat\""
+            ],
+            "image-path": ""
+        },
+        {
+            "name": "Playnite iPad",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite iPad.bat\""
+            ],
+            "image-path": ""
+        },
+        {
+            "name": "Playnite iPhone",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "detached": [
+                "\"C:\\GameStreamLP\\GS Playnite iphone.bat\""
+            ],
+            "image-path": ""
+        }
+    ]
+}
