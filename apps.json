@@ -1,0 +1,39 @@
+{
+    "env": {
+        "PATH": "$(PATH);$(ProgramFiles(x86))\\Steam"
+    },
+    "apps": [
+        {
+            "name": "Desktop",
+            "image-path": "desktop.png",
+            "exclude-global-prep-cmd": "true",
+            "elevated": "false"
+        },
+        {
+            "name": "Playnite - Auto",
+            "output": "",
+            "cmd": "",
+            "exclude-global-prep-cmd": "false",
+            "elevated": "false",
+            "auto-detach": "true",
+            "image-path": "",
+            "prep-cmd": [
+                {
+                    "do": "cmd \/C start C:\\RemoteGaming\\MultiMonitorTool.exe \/SetPrimary \\\\.\\DISPLAY3",
+                    "undo": "\"C:\\RemoteGaming\\MultiMonitorTool.exe\" \/LoadConfig default_monitors.cfg",
+                    "elevated": "false"
+                },
+                {
+                    "do": "cmd \/C start C:\\RemoteGaming\\MultiMonitorTool.exe \/SetMonitors \"Name=\\\\.\\DISPLAY3 Width=%SUNSHINE_CLIENT_WIDTH% Height=%SUNSHINE_CLIENT_HEIGHT% DisplayFrequency=%SUNSHINE_CLIENT_FPS%\"",
+                    "undo": "",
+                    "elevated": "false"
+                },
+                {
+                    "do": "cmd \/C \"start %LOCALAPPDATA%\\Playnite\\Playnite.FullscreenApp.exe\"",
+                    "undo": "taskkill \/F \/IM Playnite.FullscreenApp.exe\"",
+                    "elevated": "false"
+                }
+            ]
+        }
+    ]
+}
