@@ -5,13 +5,14 @@ Some ideas and automation tips for running your own PC as a cloud gaming server
 https://github.com/GeneBO98/HostedCloudGaming/assets/60564320/32a0da4d-4ef7-4e54-832b-a6f49a5224bf
 
 ## Advisory
-This guide is designed to work on Windows for the gaming host. Additionally, two of the resolution configurations in Sunshine are for iPad and iPhone but can be removed or tweaked for different devices. It is also recommended that you use a Dummy DP or HDMI adapter as the remote connection monitor. The reason is that you can cheaply get a 4K equivalent virtual monitor that will adapt to many display resolutions and prevent the need for your primary monitor to change resolutions. I found this to be the cleanest approach. The adapter I used is here: https://www.amazon.com/dp/B0C2CGHRG4?psc=1&ref=ppx_yo2ov_dt_b_product_details
+Sunshine now supports variables for the display resolution and FPS. So, there is no longer a need for multiple applications in Sunshine for different resolutions. It will work OOTB if you copy the included apps.json file and make sure you have this path: C:\RemoteGaming\MultiMonitorTool.exe. You can change that path to whatever but will need to edit Sunshine if you do so.
+
+I recommended that you use a Dummy DP or HDMI adapter as the remote connection monitor. The reason is that you can cheaply get a 4K equivalent virtual monitor that will adapt to many display resolutions and prevent the need for your primary monitor to change resolutions. I found this to be the cleanest approach. The adapter I used is here: https://www.amazon.com/dp/B0C2CGHRG4?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
 ## Utilities
 This setup utilizes a few pieces of software that are included, but more recent versions can also be acquired from these sites:
 | Application | Download Link |
 | -- | -- |
-GameStream LaunchPad: | https://github.com/cgarst/gamestream_launchpad
 MultiMonitorTool: |     https://www.nirsoft.net/utils/multimonitortool-x64.zip
 Sunshine:          |    https://github.com/LizardByte/Sunshine
 Playnite:           |   https://playnite.link/
@@ -19,16 +20,15 @@ JoyToKey:            |  https://joytokey.net/en/
 
 ## Setup
 1. Run the Sunshine installer. It should install to C:\Program Files\Sunshine on Windows so place the **apps.json** and **sunshine.conf** files into the **config** folder in that directory.
-2. Unzip GameStream Launchpad here: **C:\GameStreamLP**
-3. Unzip MultiMonitorTool into the same directory as GameStream Launchpad
-4. **NOTE**: You do not need to install those if you just copy the included folder into C:\
-5. Restart Sunshine
-6. Install Playnite on the hosting device (config instructions below)
-7. Connect to Sunshine using the Moonlight application from your desired device
+2. Unzip MultiMonitorTool into any directory
+3. **NOTE**: You do not need to install those if you just copy the included folder into C:\
+4. Restart Sunshine
+5. Install Playnite on the host device (config instructions below)
+6. Connect to Sunshine using the Moonlight application from your desired device
 
 ## MultiMonitorTool and JoyToKey
-If you look into the configuration file for Sunshine, you will see that there are Global Prep Commands. These are commands that run at the beginning of every session with Sunshine and terminate when the session disconnects. I have this configured to launch JoyToKey as well as utilize MultiMonitorTool. JoyToKey will allow you to set any buttons on your controller to keyboard shortcuts. This is especially important for older emulated games that don't have a quit option within the game. In my case, I use a PS4 controller so I mapped the select and start buttons to be ALT + F4 so that when I press them together, my game exits. 
-MultiMonitorTool is configured to change the primary display before Playnite opens so that it opens on the proper display each time (you can also choose what display Sunshine always opens on). In my case, the virtual display is DISPLAY3, but all you will need to do is launch MultiMonitorTool.exe while your dummy adapter is plugged in (if you choose to use that) and then find what display is the correct one. Also, you will notice that the undo command uses the default_monitors.cfg. This is so that when Playnite exits my monitor arrangement and resolution reverts to exactly how it was before I connected. You will need to create your own multi-monitor tool configuration, or just edit the one provided to have the proper DISPLAY and resolution values.
+If you look into the configuration file for Sunshine, you will see that there are Global Prep Commands. These are commands that run at the beginning of every session with Sunshine and terminate when the session disconnects. I have this configured to launch JoyToKey. JoyToKey will allow you to set any buttons on your controller to keyboard shortcuts. This is especially important for older emulated games that don't have a quit option within the game. In my case, I use a PS4 controller so I mapped the select and start buttons to be ALT + F4 so that when I press them together, my game exits. 
+MultiMonitorTool is configured now within the application itself due to the latest Sunshine updates. It changes the primary display before Playnite opens so that it opens on the proper display each time (you can also choose what display Sunshine always opens on). In my case, the virtual display is DISPLAY3, but all you will need to do is launch MultiMonitorTool.exe while your dummy adapter is plugged in (if you choose to use that) and then find what display is the correct one. Also, you will notice that the undo command uses the default_monitors.cfg. This is so that when Playnite exits my monitor arrangement and resolution reverts to exactly how it was before I connected. You will need to create your own multi-monitor tool configuration, or just edit the one provided to have the proper DISPLAY and resolution values.
 
 ## Playnite Configuration
 Playnite is quite powerful and will allow you to not only centralize all of your games into a single library but also make using Emulators seamless. There is one caveat. As of 10/21/2023 the FullScreen menu does not support DirectInput, meaning it only works with XInput devices (XBOX Controllers). This is fine if you use DS4 to emulate an XBOX 360 controller or set your Sunshine settings to emulate the 360 GamePad (in the included config).
