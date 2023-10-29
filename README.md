@@ -2,7 +2,10 @@
 Some ideas and automation tips for running your own PC as a cloud gaming server
 
 ## DEMO
-https://github.com/GeneBO98/HostedCloudGaming/assets/60564320/32a0da4d-4ef7-4e54-832b-a6f49a5224bf
+https://github.com/GeneBO98/HostedCloudGaming/assets/60564320/4576812a-de34-411f-b234-a2a57191a912
+
+
+
 
 ## Advisory
 Sunshine now supports variables for the display resolution and FPS. So, there is no longer a need for multiple applications in Sunshine for different resolutions. It will work OOTB if you copy the included apps.json file and make sure you have this path: C:\RemoteGaming\MultiMonitorTool.exe. You can change that path to whatever but will need to edit Sunshine if you do so.
